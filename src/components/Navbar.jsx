@@ -38,9 +38,9 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
             <img
-              src="https://base44.com/logo_v2.svg"
+              src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0cefa2985_generated_image.png"
               alt="Logo Cabinet Infirmier Mougins"
-              className="w-9 h-9"
+              className="w-9 h-9 rounded-full object-cover"
             />
             <span className={`font-heading font-semibold text-lg hidden sm:block transition-colors ${scrolled ? 'text-cim-deep' : 'text-cim-deep'}`}>
               Cabinet Infirmier Mougins

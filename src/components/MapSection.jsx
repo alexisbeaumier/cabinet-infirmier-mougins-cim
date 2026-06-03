@@ -1,8 +1,5 @@
 import { MapPin, Navigation } from 'lucide-react';
 import useScrollReveal from './useScrollReveal';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-
-const POSITION = [43.6013, 6.9872]; // 1279 bd Georges Courteline, Mougins
 
 export default function MapSection() {
   const { ref, isVisible } = useScrollReveal();
@@ -27,26 +24,15 @@ export default function MapSection() {
         </div>
 
         <div className="relative rounded-3xl overflow-hidden shadow-xl">
-          <div className="h-[400px] md:h-[500px]">
-            <MapContainer
-              center={POSITION}
-              zoom={14}
-              scrollWheelZoom={false}
-              className="h-full w-full z-0"
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={POSITION}>
-                <Popup>
-                  <strong>Cabinet Infirmier Mougins</strong><br />
-                  1279 bd Georges Courteline<br />
-                  06250 Mougins
-                </Popup>
-              </Marker>
-            </MapContainer>
-          </div>
+          <iframe
+            title="Cabinet Infirmier Mougins - Google Maps"
+            src="https://maps.google.com/maps?width=100%&height=100%&hl=fr&q=1279+boulevard+Georges+Courteline,+06250+Mougins&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+            className="w-full h-[400px] md:h-[500px] border-0"
+            scrolling="no"
+            marginHeight="0"
+            marginWidth="0"
+            allowFullScreen
+          />
 
           <div className="absolute bottom-4 left-4 right-4 md:left-6 md:bottom-6 md:right-auto">
             <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 shadow-lg max-w-sm">

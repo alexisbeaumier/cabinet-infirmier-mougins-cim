@@ -5,6 +5,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import ScrollToTop from '@/components/ScrollToTop';
+import LoadingScreen from '@/components/LoadingScreen';
+import PageTransition from '@/components/PageTransition';
 
 import Home from './pages/Home';
 import NosSoins from './pages/NosSoins';
@@ -32,13 +35,18 @@ const AuthenticatedApp = () => {
   }
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/nos-soins" element={<NosSoins />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/mentions-legales" element={<MentionsLegales />} />
-      <Route path="*" element={<PageNotFound />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <PageTransition>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/nos-soins" element={<NosSoins />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </PageTransition>
+    </>
   );
 };
 
@@ -47,6 +55,7 @@ function App() {
     <AuthProvider>
       <QueryClientProvider client={queryClientInstance}>
         <Router>
+          <LoadingScreen />
           <AuthenticatedApp />
         </Router>
         <Toaster />

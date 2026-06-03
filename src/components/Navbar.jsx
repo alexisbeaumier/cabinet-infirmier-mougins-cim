@@ -43,13 +43,18 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-sm font-medium transition-colors ${
+                className={`relative text-sm font-medium transition-colors group ${
                   location.pathname === link.to
-                    ? 'text-cim-pine font-semibold'
-                    : 'text-cim-deep/70 hover:text-cim-pine'
+                    ? 'text-orange-500 font-semibold'
+                    : 'text-cim-deep/70 hover:text-orange-500'
                 }`}
               >
                 {link.label}
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-orange-500 transition-all duration-300 rounded-full ${
+                    location.pathname === link.to ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                />
               </Link>
             ))}
             <a

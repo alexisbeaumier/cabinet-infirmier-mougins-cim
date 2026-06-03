@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import TrustBar from '../components/TrustBar';
 import ServicesTeaser from '../components/ServicesTeaser';
 import Commitment from '../components/Commitment';
 import Testimonials from '../components/Testimonials';
@@ -16,6 +17,7 @@ export default function Home() {
       <ScrollProgress />
       <Navbar />
       <Hero />
+      <TrustBar />
       <ServicesTeaser />
       <Commitment />
       <Testimonials />

@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Heart, Stethoscope, Syringe, Shield, HandHeart, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import useScrollReveal from './useScrollReveal';
-
-const careItems = [
-  { icon: Heart, label: 'Soins d\'hygiène et de confort' },
-  { icon: Stethoscope, label: 'Pansements et soins de plaies' },
-  { icon: Syringe, label: 'Injections et bilans sanguins' },
-  { icon: Shield, label: 'Surveillance et prévention' },
-  { icon: HandHeart, label: 'Soins palliatifs' },
-];
+import { careItems } from './Services';
 
 export default function ServicesTeaser() {
   const { ref, isVisible } = useScrollReveal();
@@ -35,15 +28,16 @@ export default function ServicesTeaser() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
           {careItems.map((item) => (
-            <div
-              key={item.label}
+            <Link
+              key={item.id}
+              to={`/nos-soins#${item.id}`}
               className="bg-white rounded-2xl p-6 text-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="w-12 h-12 rounded-xl bg-cim-mist flex items-center justify-center mx-auto mb-4 group-hover:bg-cim-pine transition-colors duration-300">
                 <item.icon className="w-5 h-5 text-cim-pine group-hover:text-white transition-colors duration-300" />
               </div>
               <p className="text-sm font-medium text-cim-deep text-center leading-snug">{item.label}</p>
-            </div>
+            </Link>
           ))}
         </div>
 

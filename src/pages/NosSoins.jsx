@@ -1,13 +1,26 @@
+import { useEffect, useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { Phone, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
-import Services from '../components/Services';
+import Services, { careItems } from '../components/Services';
+import ServiceModal from '../components/ServiceModal';
 import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
 import FloatingPhone from '../components/FloatingPhone';
 import CustomCursor from '../components/CustomCursor';
-import { Link } from 'react-router-dom';
-import { Phone, ArrowRight } from 'lucide-react';
 
 export default function NosSoins() {
+  const location = useLocation();
+  const [autoOpen, setAutoOpen] = useState(null);
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const found = careItems.find((c) => c.id === id);
+      if (found) setAutoOpen(found);
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen">
       <ScrollProgress />
@@ -44,6 +57,7 @@ export default function NosSoins() {
       </div>
 
       <Services />
+      {autoOpen && <ServiceModal item={autoOpen} onClose={() => setAutoOpen(null)} />}
       <Footer />
       <FloatingPhone />
       <CustomCursor />

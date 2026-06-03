@@ -42,18 +42,7 @@ export default function ContactSection() {
         ref={ref}
         className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-700 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
       >
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-cim-pine font-semibold text-sm tracking-widest uppercase">
-            Contact
-          </span>
-          <h2 className="mt-4 font-heading font-bold text-3xl md:text-4xl text-cim-deep leading-tight">
-            Prenez <span className="text-cim-pine">rendez-vous</span>
-          </h2>
-          <p className="mt-4 text-lg text-cim-deep/70">
-            N'hésitez pas à nous contacter par téléphone ou via le formulaire ci-dessous. 
-            Nous vous rappellerons dans les plus brefs délais.
-          </p>
-        </div>
+
 
         <div className="grid lg:grid-cols-5 gap-12">
           <div className="lg:col-span-3">

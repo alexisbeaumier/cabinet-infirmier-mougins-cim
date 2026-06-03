@@ -40,10 +40,10 @@ export default function Navbar() {
             <img
               src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0cefa2985_generated_image.png"
               alt="Logo Cabinet Infirmier Mougins"
-              className="w-9 h-9 rounded-full object-cover"
+              className="w-12 h-12 rounded-full object-cover"
             />
-            <span className={`font-heading font-semibold text-lg hidden sm:block transition-colors ${scrolled ? 'text-cim-deep' : 'text-cim-deep'}`}>
-              Cabinet Infirmier Mougins
+            <span className="font-heading font-semibold text-lg hidden sm:block text-cim-deep">
+              Cabinet <span className="text-cim-pine">Infirmier</span> Mougins
             </span>
           </Link>
 

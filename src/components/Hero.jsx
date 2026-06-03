@@ -17,7 +17,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl ml-0 md:ml-16 lg:ml-24">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cim-mist/80 backdrop-blur-sm text-cim-pine text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-cim-pine" />
             Mougins (06250)

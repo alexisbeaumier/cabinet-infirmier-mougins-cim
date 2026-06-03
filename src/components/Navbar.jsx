@@ -36,11 +36,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-1">
             <img
               src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0cefa2985_generated_image.png"
               alt="Logo Cabinet Infirmier Mougins"
-              className="w-14 h-14 rounded-full object-cover"
+              className="w-16 h-16 rounded-full object-cover"
             />
             <span className="font-heading font-semibold text-lg hidden sm:block text-cim-deep">
               Cabinet <span className="text-cim-pine">Infirmier</span> Mougins

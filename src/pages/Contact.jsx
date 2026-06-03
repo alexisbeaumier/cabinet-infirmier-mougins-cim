@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import ScrollHint from '../components/ScrollHint';
 import ContactSection from '../components/ContactSection';
 import MapSection from '../components/MapSection';
 import Footer from '../components/Footer';
@@ -22,6 +23,9 @@ export default function Contact() {
           <p className="mt-6 text-lg text-cim-deep/70 max-w-2xl mx-auto">
             Par téléphone, email ou formulaire — nous vous répondons dans les plus brefs délais.
           </p>
+          <div className="mt-8 flex justify-center">
+            <ScrollHint />
+          </div>
         </div>
       </div>
 

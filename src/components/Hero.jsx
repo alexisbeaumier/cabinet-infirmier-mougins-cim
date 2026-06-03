@@ -1,5 +1,6 @@
 import { Phone, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ScrollHint from './ScrollHint';
 
 const HERO_IMAGE = "https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0e9db6967_generated_d02f9faa.png";
 
@@ -50,6 +51,10 @@ export default function Hero() {
             </Link>
           </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <ScrollHint />
       </div>
     </section>
   );

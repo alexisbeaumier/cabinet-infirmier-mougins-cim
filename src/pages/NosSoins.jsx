@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { Phone, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import ScrollHint from '../components/ScrollHint';
 import Services, { careItems } from '../components/Services';
 import ServiceModal from '../components/ServiceModal';
 import Footer from '../components/Footer';
@@ -52,6 +53,9 @@ export default function NosSoins() {
               Nous écrire
               <ArrowRight className="w-5 h-5" />
             </Link>
+          </div>
+          <div className="mt-10 flex justify-center">
+            <ScrollHint />
           </div>
         </div>
       </div>

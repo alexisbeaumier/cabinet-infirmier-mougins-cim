@@ -1,13 +1,9 @@
 import { Phone, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HERO_IMAGE = "https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0e9db6967_generated_d02f9faa.png";
 
 export default function Hero() {
-  const scrollToContact = () => {
-    const el = document.getElementById('contact');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
@@ -45,13 +41,13 @@ export default function Hero() {
               <Phone className="w-5 h-5" />
               Appeler maintenant
             </a>
-            <button
-              onClick={scrollToContact}
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center gap-3 bg-white/80 backdrop-blur-sm text-cim-deep border-2 border-cim-deep/15 px-8 py-4 rounded-full text-lg font-semibold hover:border-cim-pine hover:text-cim-pine transition-all duration-300"
             >
               <MessageCircle className="w-5 h-5" />
               Nous contacter
-            </button>
+            </Link>
           </div>
         </div>
       </div>

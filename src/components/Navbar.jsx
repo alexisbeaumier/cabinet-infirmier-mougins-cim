@@ -2,31 +2,22 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Menu, X } from 'lucide-react';
 
+const navLinks = [
+  { label: 'Accueil', to: '/' },
+  { label: 'Nos soins', to: '/nos-soins' },
+  { label: 'Contact', to: '/contact' },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const isHome = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const scrollToSection = (id) => {
-    setMenuOpen(false);
-    if (!isHome) return;
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const navLinks = [
-    { label: 'Nos soins', id: 'soins' },
-    { label: 'Notre engagement', id: 'engagement' },
-    { label: 'Localisation', id: 'localisation' },
-    { label: 'Contact', id: 'contact' },
-  ];
 
   return (
     <header
@@ -48,25 +39,19 @@ export default function Navbar() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) =>
-              isHome ? (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-sm font-medium text-cim-deep/70 hover:text-cim-pine transition-colors"
-                >
-                  {link.label}
-                </button>
-              ) : (
-                <Link
-                  key={link.id}
-                  to={`/#${link.id}`}
-                  className="text-sm font-medium text-cim-deep/70 hover:text-cim-pine transition-colors"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
+            {navLinks.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === link.to
+                    ? 'text-cim-pine font-semibold'
+                    : 'text-cim-deep/70 hover:text-cim-pine'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
             <a
               href="tel:+33612345678"
               className="flex items-center gap-2 bg-cim-pine text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-cim-deep transition-colors"
@@ -90,13 +75,16 @@ export default function Navbar() {
         <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-cim-mist">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left text-base font-medium text-cim-deep py-2 hover:text-cim-pine transition-colors"
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setMenuOpen(false)}
+                className={`block w-full text-left text-base font-medium py-2 transition-colors ${
+                  location.pathname === link.to ? 'text-cim-pine' : 'text-cim-deep hover:text-cim-pine'
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
             <a
               href="tel:+33612345678"

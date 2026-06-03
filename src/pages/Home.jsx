@@ -1,9 +1,9 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
+import ServicesTeaser from '../components/ServicesTeaser';
 import Commitment from '../components/Commitment';
+import Testimonials from '../components/Testimonials';
 import MapSection from '../components/MapSection';
-import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
 import FloatingPhone from '../components/FloatingPhone';
@@ -15,10 +15,10 @@ export default function Home() {
       <ScrollProgress />
       <Navbar />
       <Hero />
-      <Services />
+      <ServicesTeaser />
       <Commitment />
+      <Testimonials />
       <MapSection />
-      <ContactSection />
       <Footer />
       <FloatingPhone />
       <CustomCursor />

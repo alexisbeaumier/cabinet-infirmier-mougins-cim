@@ -9,7 +9,6 @@ import MapSection from '../components/MapSection';
 import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
 import FloatingPhone from '../components/FloatingPhone';
-import CustomCursor from '../components/CustomCursor';
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
       <MapSection />
       <Footer />
       <FloatingPhone />
-      <CustomCursor />
     </div>
   );
 }

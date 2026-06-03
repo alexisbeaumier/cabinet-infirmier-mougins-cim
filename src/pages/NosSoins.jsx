@@ -8,7 +8,6 @@ import ServiceModal from '../components/ServiceModal';
 import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
 import FloatingPhone from '../components/FloatingPhone';
-import CustomCursor from '../components/CustomCursor';
 
 export default function NosSoins() {
   const location = useLocation();
@@ -64,7 +63,6 @@ export default function NosSoins() {
       {autoOpen && <ServiceModal item={autoOpen} onClose={() => setAutoOpen(null)} />}
       <Footer />
       <FloatingPhone />
-      <CustomCursor />
     </div>
   );
 }

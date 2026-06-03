@@ -3,7 +3,6 @@ import { ArrowLeft } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
-import CustomCursor from '../components/CustomCursor';
 
 export default function MentionsLegales() {
   return (
@@ -97,7 +96,6 @@ export default function MentionsLegales() {
       </main>
 
       <Footer />
-      <CustomCursor />
     </div>
   );
 }

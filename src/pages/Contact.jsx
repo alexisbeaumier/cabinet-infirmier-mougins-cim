@@ -5,7 +5,6 @@ import MapSection from '../components/MapSection';
 import Footer from '../components/Footer';
 import ScrollProgress from '../components/ScrollProgress';
 import FloatingPhone from '../components/FloatingPhone';
-import CustomCursor from '../components/CustomCursor';
 
 export default function Contact() {
   return (
@@ -33,7 +32,6 @@ export default function Contact() {
       <MapSection />
       <Footer />
       <FloatingPhone />
-      <CustomCursor />
     </div>
   );
 }

@@ -71,7 +71,11 @@ export default function Navbar() {
             className="md:hidden p-2 text-cim-deep"
             aria-label="Menu"
           >
-            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {menuOpen ? (
+              <><X className="w-6 h-6" /><span className="text-sm font-medium ml-1">Menu</span></>
+            ) : (
+              <><Menu className="w-6 h-6" /><span className="text-sm font-medium ml-1">Menu</span></>
+            )}
           </button>
         </div>
       </div>

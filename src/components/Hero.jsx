@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cim-mist/80 backdrop-blur-sm text-cim-pine text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-cim-pine" />
             Mougins (06250)
@@ -34,7 +34,7 @@ export default function Hero() {
             pour des soins de qualité dans le confort de votre foyer.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+33612345678"
               className="inline-flex items-center justify-center gap-3 bg-cim-pine text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-400/30 hover:bg-cim-deep"

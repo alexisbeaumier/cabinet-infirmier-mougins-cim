@@ -60,7 +60,7 @@ export default function Services() {
           {careItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => { setSelected(item); window.location.hash = item.id; }}
+              onClick={() => setSelected(item)}
               className="w-full flex items-center gap-4 p-5 rounded-2xl bg-cim-mist/20 border border-cim-mist hover:bg-cim-mist/50 hover:border-cim-pine/30 hover:shadow-md transition-all duration-300 group text-left"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-cim-mist flex items-center justify-center group-hover:bg-cim-pine transition-colors duration-300">
@@ -76,7 +76,7 @@ export default function Services() {
         </div>
       </div>
 
-      {selected && <ServiceModal item={selected} onClose={() => { setSelected(null); history.replaceState(null, '', window.location.pathname); }} />}
+      {selected && <ServiceModal item={selected} onClose={() => setSelected(null)} />}
     </section>
   );
 }

@@ -26,7 +26,7 @@ export const careItems = [
     label: 'Surveillance et prévention',
     desc: 'Suivi des traitements et éducation thérapeutique.',
     detail: "Nous assurons la surveillance de paramètres vitaux (tension, glycémie, saturation), la préparation et administration de traitements médicamenteux, la surveillance post-opératoire, et l'éducation thérapeutique du patient et de ses aidants. Nous sommes votre lien privilégié avec votre équipe médicale.",
-    image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=700&q=80",
+    image: "https://media.base44.com/images/public/6a2091c60722d8d712f983eb/43199e1da_image_2026-06-08_154053376.png",
   },
   {
     id: 'palliatifs',

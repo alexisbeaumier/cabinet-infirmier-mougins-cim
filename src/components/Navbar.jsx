@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-1">
             <img
-              src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/40c46822f_image.png"
+              src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/fae523cee_ChatGPTImageJun8202603_36_08PM.png"
               alt="Logo Cabinet Infirmier Mouginois"
               className="w-20 h-20 object-contain"
             />

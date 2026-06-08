@@ -1,17 +1,9 @@
 import { useState } from 'react';
-import { Heart, Stethoscope, Syringe, Shield, HandHeart, ArrowRight } from 'lucide-react';
+import { Stethoscope, Syringe, Shield, HandHeart, ArrowRight } from 'lucide-react';
 import useScrollReveal from './useScrollReveal';
 import ServiceModal from './ServiceModal';
 
 export const careItems = [
-  {
-    id: 'hygiene',
-    icon: Heart,
-    label: "Soins d'hygiène et de confort",
-    desc: 'Toilette, lever, coucher — dans le respect de votre intimité.',
-    detail: "Nos infirmiers réalisent les soins d'hygiène corporelle complète : toilette au lit ou en salle de bain, aide au lever et au coucher, prévention des escarres, soins de bouche et soins des ongles. Chaque soin est effectué avec respect de votre pudeur et de votre dignité, à votre rythme.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=700&q=80",
-  },
   {
     id: 'pansements',
     icon: Stethoscope,
@@ -34,7 +26,7 @@ export const careItems = [
     label: 'Surveillance et prévention',
     desc: 'Suivi des traitements et éducation thérapeutique.',
     detail: "Nous assurons la surveillance de paramètres vitaux (tension, glycémie, saturation), la préparation et administration de traitements médicamenteux, la surveillance post-opératoire, et l'éducation thérapeutique du patient et de ses aidants. Nous sommes votre lien privilégié avec votre équipe médicale.",
-    image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=700&q=80",
   },
   {
     id: 'palliatifs',

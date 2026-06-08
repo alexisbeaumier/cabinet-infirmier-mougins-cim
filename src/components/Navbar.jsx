@@ -29,12 +29,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-1">
             <img
-              src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0cefa2985_generated_image.png"
-              alt="Logo Cabinet Infirmier Mougins"
+              src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0cefa5ee6_generated_image.png"
+              alt="Logo Cabinet Infirmier Mouginois"
               className="w-16 h-16 rounded-full object-cover"
             />
             <span className="font-heading font-semibold text-lg hidden sm:block text-cim-deep">
-              Cabinet <span className="text-cim-pine">Infirmier</span> Mougins
+              Cabinet <span className="text-cim-pine">Infirmier</span> Mouginois
             </span>
           </Link>
 

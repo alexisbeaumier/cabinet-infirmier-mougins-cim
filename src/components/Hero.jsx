@@ -26,7 +26,7 @@ export default function Hero() {
 
           <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-cim-deep leading-tight tracking-tight">
             Cabinet Infirmier
-            <span className="block text-cim-pine">Mougins</span>
+            <span className="block text-cim-pine">Mouginois</span>
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-cim-deep/70 leading-relaxed max-w-lg">

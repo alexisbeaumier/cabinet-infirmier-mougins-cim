@@ -61,10 +61,14 @@ module.exports = {
   				ring: 'hsl(var(--sidebar-ring))'
   			},
         cim: {
-          pine: '#1D9E75',
-          deep: '#085041',
-          mist: '#E1F5EE',
-          sand: '#F1EFE8',
+          pine: '#38C7C8',
+          deep: '#083A7A',
+          mist: '#E0F7F7',
+          sand: '#EEF3FB',
+          navy: '#083A7A',
+          blue: '#0D4A94',
+          teal: '#38C7C8',
+          aqua: '#57D9D8',
         }
   		},
   		fontFamily: {

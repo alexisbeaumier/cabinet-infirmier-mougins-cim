@@ -9,12 +9,12 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-full bg-cim-pine flex items-center justify-center">
-                <span className="text-white font-bold text-sm">CIM</span>
+                <span className="text-white font-bold text-xs">CIMS</span>
               </div>
-              <span className="font-heading font-bold text-lg">Cabinet Infirmier Mougins</span>
+              <span className="font-heading font-bold text-lg">Cabinet Infirmier Mouginois</span>
             </div>
             <p className="text-white/60 leading-relaxed">
-              Soins infirmiers à domicile sur Mougins. 
+              Soins infirmiers à domicile sur Mougins et ses environs. 
               Une équipe diplômée d'État, à votre écoute et à votre service.
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 text-center">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Cabinet Infirmier Mougins. Tous droits réservés.
+            © {new Date().getFullYear()} Cabinet Infirmier Mouginois. Tous droits réservés.
           </p>
         </div>
       </div>

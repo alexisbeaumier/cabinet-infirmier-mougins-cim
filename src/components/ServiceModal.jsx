@@ -12,7 +12,7 @@ export default function ServiceModal({ item, onClose }) {
         onClick={(e) => e.stopPropagation()}>
         
         <div className="relative">
-          <img src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/43199e1da_image_2026-06-08_154053376.png" alt={item.label} className="w-full h-52 object-cover" />
+          <img src={item.image} alt={item.label} className="w-full h-52 object-cover" />
           <button
             onClick={onClose}
             className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow hover:bg-white transition-colors">

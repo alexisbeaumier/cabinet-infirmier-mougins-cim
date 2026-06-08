@@ -28,9 +28,9 @@ export default function LoadingScreen() {
     >
       <div className="flex flex-col items-center gap-4 animate-fade-in-up">
         <img
-          src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/0cefa2985_generated_image.png"
+          src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/fae523cee_ChatGPTImageJun8202603_36_08PM.png"
           alt="Logo CIM"
-          className="w-20 h-20 rounded-full object-cover shadow-xl"
+          className="w-20 h-20 object-contain"
         />
         <p className="font-heading font-semibold text-cim-deep text-lg tracking-wide">
           Cabinet <span className="text-cim-pine">Infirmier</span> Mougins

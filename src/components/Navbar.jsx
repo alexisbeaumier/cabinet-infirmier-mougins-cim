@@ -31,7 +31,7 @@ export default function Navbar() {
             <img
               src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/40c46822f_image.png"
               alt="Logo Cabinet Infirmier Mouginois"
-              className="w-16 h-16 rounded-full object-cover"
+              className="w-20 h-20 object-contain"
             />
             <span className="font-heading font-semibold text-lg hidden sm:block text-cim-deep">
               Cabinet <span className="text-cim-pine">Infirmier</span> Mouginois

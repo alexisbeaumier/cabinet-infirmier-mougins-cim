@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import { useLocation, Link } from 'react-router-dom';
 import { Phone, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
@@ -12,6 +13,13 @@ import FloatingPhone from '../components/FloatingPhone';
 export default function NosSoins() {
   const location = useLocation();
   const [autoOpen, setAutoOpen] = useState(null);
+
+  useEffect(() => {
+    document.title = "Soins Infirmiers à Domicile Mougins — Prise de Sang, Pansements | CIM";
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) { meta = document.createElement('meta'); meta.name = 'description'; document.head.appendChild(meta); }
+    meta.content = "Soins infirmiers à domicile à Mougins (06250) : pansements, injections, prélèvements sanguins, surveillance post-opératoire. Cabinet Infirmier Mougins (CIM).";
+  }, []);
 
   useEffect(() => {
     if (location.hash) {

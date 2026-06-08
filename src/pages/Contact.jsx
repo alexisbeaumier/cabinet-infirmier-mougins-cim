@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import ScrollHint from '../components/ScrollHint';
 import ContactSection from '../components/ContactSection';
@@ -7,6 +8,13 @@ import ScrollProgress from '../components/ScrollProgress';
 import FloatingPhone from '../components/FloatingPhone';
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contacter le Cabinet Infirmier de Mougins | CIM";
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) { meta = document.createElement('meta'); meta.name = 'description'; document.head.appendChild(meta); }
+    meta.content = "Contactez le Cabinet Infirmier Mouginois (CIM) au 1279 boulevard Georges Courteline, Mougins 06250. Formulaire de contact, téléphone et email disponibles.";
+  }, []);
+
   return (
     <div className="min-h-screen">
       <ScrollProgress />

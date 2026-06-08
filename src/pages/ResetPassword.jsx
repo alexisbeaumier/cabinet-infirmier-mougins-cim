@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,13 @@ import { Lock, Loader2, AlertTriangle } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
 
 export default function ResetPassword() {
+  useEffect(() => {
+    document.title = "Réinitialisation du mot de passe | CIM";
+    const meta = document.createElement('meta');
+    meta.name = 'robots'; meta.content = 'noindex, nofollow';
+    document.head.appendChild(meta);
+    return () => document.head.removeChild(meta);
+  }, []);
   const [searchParams] = useSearchParams();
   const resetToken = searchParams.get("token");
 

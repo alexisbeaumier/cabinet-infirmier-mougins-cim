@@ -4,19 +4,19 @@ export default function ServiceModal({ item, onClose }) {
   return (
     <div
       className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
-      onClick={onClose}
-    >
+      onClick={onClose}>
+      
       <div
         className="bg-white rounded-3xl shadow-2xl max-w-xl w-full overflow-hidden"
         style={{ animation: 'modalIn 0.25s ease forwards' }}
-        onClick={(e) => e.stopPropagation()}
-      >
+        onClick={(e) => e.stopPropagation()}>
+        
         <div className="relative">
-          <img src={item.image} alt={item.label} className="w-full h-52 object-cover" />
+          <img src="https://media.base44.com/images/public/6a2091c60722d8d712f983eb/43199e1da_image_2026-06-08_154053376.png" alt={item.label} className="w-full h-52 object-cover" />
           <button
             onClick={onClose}
-            className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow hover:bg-white transition-colors"
-          >
+            className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow hover:bg-white transition-colors">
+            
             <X className="w-4 h-4 text-cim-deep" />
           </button>
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
@@ -31,8 +31,8 @@ export default function ServiceModal({ item, onClose }) {
           <p className="text-cim-deep/70 leading-relaxed mb-6">{item.detail}</p>
           <a
             href="tel:+33612345678"
-            className="inline-flex items-center gap-2 bg-cim-pine text-white px-6 py-3 rounded-full font-semibold hover:bg-cim-deep transition-all duration-200"
-          >
+            className="inline-flex items-center gap-2 bg-cim-pine text-white px-6 py-3 rounded-full font-semibold hover:bg-cim-deep transition-all duration-200">
+            
             <Phone className="w-4 h-4" />
             Prendre rendez-vous
           </a>
@@ -44,6 +44,6 @@ export default function ServiceModal({ item, onClose }) {
           to   { opacity: 1; transform: scale(1) translateY(0); }
         }
       `}</style>
-    </div>
-  );
+    </div>);
+
 }
